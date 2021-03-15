@@ -3,6 +3,8 @@
 ## Introduction
 
 The user (customer) can view the list of products and can make purchases if the cash on his account allows it. \
+Customer is not include in example API. \
+For database diagram go to /doc/img
 
 ## Example API documentation
 
