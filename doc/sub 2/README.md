@@ -269,7 +269,7 @@ GET /student_list
 
 	"count": 245
 }
-
+```
 GET /teacher_list
 ```json
 [
