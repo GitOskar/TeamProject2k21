@@ -245,3 +245,57 @@ e.g. response
         "medium": 1,
     }
 ```
+
+#### Moria API
+
+GET /student_list
+```json
+{
+    "result": {
+        "array": [
+            {
+                "id": 0,
+                "name": ""
+            },
+            {
+                "id": 3,
+                "name": "0i SKNI Stud. Koło Nauk. Inf. (zaj. cykl.)"
+            },
+            {
+                "id": 142,
+                "name": "2 Geografia I stopień stacj. hydrometeorologia (P)"
+            },
+	...
+
+	"count": 245
+}
+
+GET /teacher_list
+```json
+[
+...
+{
+                "degree": "dr inż.",
+                "department_id": 3,
+                "first_name": "Dariusz",
+                "id": 3064,
+                "last_name": "Dobrowolski"
+            },
+            {
+                "degree": "mgr inż.",
+                "department_id": 46,
+                "first_name": "Piotr",
+                "id": 3065,
+                "last_name": "Schneider"
+            },
+            {
+                "degree": "mgr",
+                "department_id": 4,
+                "first_name": "J.",
+                "id": 3067,
+                "last_name": "Matusiak"
+            },
+...
+	"count": 697
+}
+```
