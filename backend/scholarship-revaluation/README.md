@@ -19,33 +19,33 @@ Required currency: <CAD, HKD, ISK, PHP, DKK, HUF, CZK, \
     TRY, CNY, NOK, NZD, ZAR, USD, MXN, \
     SGD, AUD, ILS, KRW, PLN, BTC, GOLD>
 
-#### Example request
+#### Example request 1
 
 ```http
 GET http://localhost:8090?scholarship=SOCJALNE&level=FIRST&currency=USD
 ```
-#### Example response
+#### Example response 1
 
 ```
 171.1517194165043200
 ```
 
-#### Example request
+#### Example request 2 
 
 ```http
 GET http://localhost:8090?scholarship=REKTORSKIE&level=SECOND&currency=GOLD
 ```
-#### Example response
+#### Example response 2
 ```
 3.259148896545302
 ```
 
-#### Example request
+#### Example request 3
 
 ```http
 GET http://localhost:8090?scholarship=SOCJALNE&level=FIRST&currency=BTC
 ```
-#### Example response
+#### Example response 3
 ```
 0.00277099
 ```
