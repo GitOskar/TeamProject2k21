@@ -3,7 +3,7 @@
 ### 1. Be sure to have `python3` installed
 ---
 ### 2. Create python virtual enviroment. Virtual enviroment is just a folder with python modules. You can place virtual enviroment inside of  the project direcory but in that case make sure to add it to the .gitignore. You can place it also anywhere you want it dosen't matter. In order to create virtual enviroment, navigate to directory in which you want the virtual enviroment to be created and then run following command: 
-> ```python python -m venv env```
+> ```python -m venv env```
 
 <br>
 This will create virtual enviroment called 'env'
