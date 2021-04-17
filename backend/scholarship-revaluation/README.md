@@ -2,7 +2,8 @@
 
 ## Introduction
 
-API return the value of scholarship based on parameters given from user
+API return the value of scholarship based on parameters given from user \
+IF currency param is equal to GOLD, API returns value in grams.
 
 ## Documantation
 
@@ -16,14 +17,35 @@ Required currency: <CAD, HKD, ISK, PHP, DKK, HUF, CZK, \
     GBP, RON, SEK, IDR, INR, BRL, RUB, \
     HRK, JPY, THB, CHF, EUR, MYR, BGN, \
     TRY, CNY, NOK, NZD, ZAR, USD, MXN, \
-    SGD, AUD, ILS, KRW, PLN, BTC>
+    SGD, AUD, ILS, KRW, PLN, BTC, GOLD>
 
-#### Example request
+#### Example request 1
 
 ```http
-GET http://localhost:8080/scholarship-revaluation?scholarship=SOCJALNE&level=FIRST&currency=USD
+GET http://localhost:8090?scholarship=SOCJALNE&level=FIRST&currency=USD
 ```
-#### Example response
+#### Example response 1
+
 ```
-164.7194201250
+171.1517194165043200
+```
+
+#### Example request 2 
+
+```http
+GET http://localhost:8090?scholarship=REKTORSKIE&level=SECOND&currency=GOLD
+```
+#### Example response 2
+```
+3.259148896545302
+```
+
+#### Example request 3
+
+```http
+GET http://localhost:8090?scholarship=SOCJALNE&level=FIRST&currency=BTC
+```
+#### Example response 3
+```
+0.00277099
 ```
