@@ -1,5 +1,6 @@
 package scholarshiprevaluation.presentation;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,6 +12,7 @@ import scholarshiprevaluation.service.RevaluationService;
 import java.math.BigDecimal;
 
 @RestController
+@CrossOrigin
 public class ScholarshipController {
 
     RevaluationService service;
