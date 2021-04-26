@@ -1,0 +1,22 @@
+<!-- CITY -->
+<mat-form-field appearance="fill">
+    <mat-label>Miasto</mat-label>
+    <mat-select multiple [(value)]="selectedCities">
+        <mat-option *ngFor="let city of cities" [value]="city.value">{{ city.viewValue }}</mat-option>
+    </mat-select>
+</mat-form-field>
+
+<!-- POLLUTION -->
+<mat-form-field appearance="fill">
+    <mat-label>Zanieczyszczenia</mat-label>
+    <mat-select multiple [(value)]="selectedPollutions">
+        <mat-option *ngFor="let pollution of pollutions" [value]="pollution">{{ pollution }}</mat-option>
+    </mat-select>
+</mat-form-field>
+
+<!-- CONFIRM -->
+<button mat-raised-button (click)="getData()">Zatwierdź</button>
+
+
+<app-air-quality-chart [airQualityData]="airQualityData"></app-air-quality-chart>
+<c *ngIf="airQualityData != undefined">{{ airQualityData[0].city_name }}</c>
