@@ -11,12 +11,14 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
+import { AirQualityChartComponent } from './components/air-quality/air-quality-chart/air-quality-chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ScholarshipRevaluationComponent,
     AirQualityComponent,
+    AirQualityChartComponent,
   ],
   imports: [
     RouterModule,

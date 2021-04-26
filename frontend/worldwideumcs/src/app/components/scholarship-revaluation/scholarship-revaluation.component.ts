@@ -41,11 +41,10 @@ export class ScholarshipRevaluationComponent implements OnInit {
 
   setPepePicture(): void {
     if (this.amount < 10) {
-      console.log(this.amount);
       this.setImage('pepe', 'assets/images/pepe-hangman.jpg');
     }
     else if (this.amount < 200) {
-      this.setImage('pepe', 'assets/images/pepe-cryings.jpg');
+      this.setImage('pepe', 'assets/images/pepe-crying.jpg');
     }
     else if (this.amount < 700) {
       this.setImage('pepe', 'assets/images/pepe-sad.jpg');
