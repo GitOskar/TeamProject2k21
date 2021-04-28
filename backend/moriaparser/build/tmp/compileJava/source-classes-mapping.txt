@@ -1,0 +1,12 @@
+pl/umcs/moriaparser/MoriaparserApplication.java
+ pl.umcs.moriaparser.MoriaparserApplication
+pl/umcs/moriaparser/domain/TeacherListResultDto.java
+ pl.umcs.moriaparser.domain.TeacherListResultDto
+pl/umcs/moriaparser/domain/TeacherDto.java
+ pl.umcs.moriaparser.domain.TeacherDto
+pl/umcs/moriaparser/domain/MoriaResponseDto.java
+ pl.umcs.moriaparser.domain.MoriaResponseDto
+pl/umcs/moriaparser/service/MoriaParserService.java
+ pl.umcs.moriaparser.service.MoriaParserService
+pl/umcs/moriaparser/controller/MoriaParserController.java
+ pl.umcs.moriaparser.controller.MoriaParserController
