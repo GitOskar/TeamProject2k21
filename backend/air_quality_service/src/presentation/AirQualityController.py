@@ -6,7 +6,7 @@ import typing
 from service.AirQualityService import AirQualityService
 from service.ResponseParser import ResponseParser
 
-bp = Blueprint('air_quality_data', __name__, url_prefix='/air-quality')
+bp = Blueprint('air_quality_data', __name__, url_prefix='/')
 
 @bp.route('/', methods=['GET'])
 def AirQualityController():
