@@ -80,5 +80,3 @@ GET http://localhost:8080/moria-parser/it-institute
     },
     ...
 ```
-
-Get all teachers that are not from IT institute
