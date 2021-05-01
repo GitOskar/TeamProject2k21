@@ -167,7 +167,7 @@ export class AirQualityChartComponent implements OnInit, OnChanges {
 
     if (PM25List.find(value => value != 0) != undefined) {
       datasets.push({
-        label: "PM25",
+        label: "PM2.5",
         data: PM25List,
         backgroundColor: this.createRandomColor()
       })
