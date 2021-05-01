@@ -28,7 +28,7 @@ export interface PollutionTypes {
   NO2: number;
   SO2: number;
   PM10: number;
-  PM25: number;
+  "PM2.5": number;
   C6H6: number;
   O3: number;
 }

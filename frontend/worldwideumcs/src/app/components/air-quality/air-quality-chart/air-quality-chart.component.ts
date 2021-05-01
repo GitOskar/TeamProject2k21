@@ -107,8 +107,8 @@ export class AirQualityChartComponent implements OnInit, OnChanges {
         PM10List.push(0)
       }
 
-      if (value.PM25 != undefined) {
-        PM25List.push(value.PM25)
+      if (value['PM2.5'] != undefined) {
+        PM25List.push(value['PM2.5'])
       }
       else {
         PM25List.push(0)
