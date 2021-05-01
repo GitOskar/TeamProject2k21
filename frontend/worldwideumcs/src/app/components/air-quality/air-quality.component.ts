@@ -24,6 +24,8 @@ export class AirQualityComponent implements OnInit {
     }
     this.service.getAirQualityData(this.selectedCities, this.selectedPollutions).subscribe(value => {
       this.airQualityData = value;
+      
+      console.log(this.airQualityData);
     });
   }
 
@@ -31,7 +33,8 @@ export class AirQualityComponent implements OnInit {
     { value: 'lublin', viewValue: 'Lublin' },
     { value: 'warszawa', viewValue: 'Warszawa' },
     { value: 'kraków', viewValue: 'Kraków' },
-    { value: 'wrocław', viewValue: 'Wrocław' }
+    { value: 'wrocław', viewValue: 'Wrocław' },
+    { value: 'poznań', viewValue: 'Poznań' }
   ];
 
   pollutions = [

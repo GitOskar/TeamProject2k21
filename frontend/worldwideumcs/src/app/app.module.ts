@@ -29,6 +29,7 @@ import { AirQualityChartComponent } from './components/air-quality/air-quality-c
     MatSelectModule,
     MatFormFieldModule,
     MatButtonModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

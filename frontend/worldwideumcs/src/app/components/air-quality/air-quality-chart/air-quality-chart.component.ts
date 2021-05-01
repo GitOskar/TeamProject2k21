@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { Chart } from 'chart.js';
+import Chart from 'chart.js/auto';
 import { AirQualityData } from 'src/app/service/air-quality/air-quality-service.service';
 
 @Component({
@@ -11,6 +11,7 @@ export class AirQualityChartComponent implements OnInit, OnChanges {
 
   @Input() airQualityData: AirQualityData[];
   chart: Chart;
+  ctx = "airQualityChart";
 
   constructor() { }
 
@@ -27,20 +28,22 @@ export class AirQualityChartComponent implements OnInit, OnChanges {
       this.ngOnInit();
       return;
     }
-    let labels = this.airQualityData.map(value => value.city_name);
+
+    let labels = this.airQualityData.map(value => this.capitalizeFirstLetter(value.city_name));
     let datasets = this.prepareDatasets();
 
-    this.chart = new Chart("airQualityChart", {
+    this.chart = new Chart(this.ctx, {
       type: 'bar',
+      labels,
       data: {
-        labels: labels,
+        labels,
         datasets: datasets
       },
       options: {
         responsive: true,
         plugins: {
           legend: {
-            position: 'top',
+            position: 'bottom',
           },
           title: {
             display: true,
@@ -53,48 +56,121 @@ export class AirQualityChartComponent implements OnInit, OnChanges {
 
   prepareDatasets() {
     let pollutionTypes = this.airQualityData.map(value => value.pollution_types);
+    let C6H6List = [];
+    let COList = [];
+    let NO2List = [];
+    let SO2List = [];
+    let O3List = [];
+    let PM10List = [];
+    let PM25List = [];
+    console.log(pollutionTypes);
+    pollutionTypes.forEach(value => {
+      if (value.C6H6 != undefined) {
+        C6H6List.push(value.C6H6)
+      }
+      else {
+        C6H6List.push(0)
+      }
+
+      if (value.CO != undefined) {
+        COList.push(value.CO)
+      }
+      else {
+        COList.push(0)
+      }
+
+      if (value.NO2 != undefined) {
+        NO2List.push(value.NO2)
+      }
+      else {
+        NO2List.push(0)
+      }
+
+      if (value.SO2 != undefined) {
+        SO2List.push(value.SO2)
+      }
+      else {
+        SO2List.push(0)
+      }
+
+      if (value.O3 != undefined) {
+        O3List.push(value.O3)
+      }
+      else {
+        O3List.push(0)
+      }
+
+      if (value.PM10 != undefined) {
+        PM10List.push(value.PM10)
+      }
+      else {
+        PM10List.push(0)
+      }
+
+      if (value.PM25 != undefined) {
+        PM25List.push(value.PM25)
+      }
+      else {
+        PM25List.push(0)
+      }
+    });
+
     let datasets = [];
 
-    // C6H6
-    let tmp = pollutionTypes.map(value => value.C6H6);
-    if (tmp != undefined && tmp != null) {
-      datasets.push(this.newDataset("C6H6", tmp));
+    if (C6H6List.find(value => value != 0) != undefined) {
+      datasets.push({
+        label: "C6H6",
+        data: C6H6List,
+        backgroundColor: this.createRandomColor()
+      })
     }
 
-    // CO
-    tmp = pollutionTypes.map(value => value.CO);
-    if (tmp != undefined && tmp != null) {
-      datasets.push(this.newDataset("CO", tmp));
+    if (COList.find(value => value != 0) != undefined) {
+      datasets.push({
+        label: "CO",
+        data: COList,
+        backgroundColor: this.createRandomColor()
+      })
     }
 
-    // NO2
-    tmp = pollutionTypes.map(value => value.NO2);
-    if (tmp != undefined && tmp != null) {
-      datasets.push(this.newDataset("NO2", tmp));
+    if (NO2List.find(value => value != 0) != undefined) {
+      datasets.push({
+        label: "NO2",
+        data: NO2List,
+        backgroundColor: this.createRandomColor()
+      })
     }
 
-    // O3
-    tmp = pollutionTypes.map(value => value.O3);
-    if (tmp != undefined && tmp != null) {
-      datasets.push(this.newDataset("O3", tmp));
+    if (SO2List.find(value => value != 0) != undefined) {
+      datasets.push({
+        label: "SO2",
+        data: SO2List,
+        backgroundColor: this.createRandomColor()
+      })
     }
 
-    // PM10
-    tmp = pollutionTypes.map(value => value.PM10);
-    if (tmp != undefined && tmp != null) {
-      datasets.push(this.newDataset("PM10", tmp));
+    if (O3List.find(value => value != 0) != undefined) {
+      datasets.push({
+        label: "O3",
+        data: O3List,
+        backgroundColor: this.createRandomColor()
+      })
     }
 
-    // PM2.5
-    tmp = pollutionTypes.map(value => value.PM25);
-    if (tmp != undefined && tmp != null) {
-      datasets.push(this.newDataset("PM2.5", tmp));
+    if (PM10List.find(value => value != 0) != undefined) {
+      datasets.push({
+        label: "PM10",
+        data: PM10List,
+        backgroundColor: this.createRandomColor()
+      })
     }
 
-    // SO2
-    tmp = pollutionTypes.map(value => value.SO2);
-    if (tmp != undefined && tmp != null) {
-      datasets.push(this.newDataset("SO2", tmp));
+    if (PM25List.find(value => value != 0) != undefined) {
+      datasets.push({
+        label: "PM25",
+        data: PM25List,
+        backgroundColor: this.createRandomColor()
+      })
     }
 
     return datasets;
@@ -111,5 +187,9 @@ export class AirQualityChartComponent implements OnInit, OnChanges {
 
   createRandomColor() {
     return '#' + (0x1000000 + Math.random() * 0xffffff).toString(16).substr(1, 6);
+  }
+
+  capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
   }
 }
