@@ -24,8 +24,6 @@ export class AirQualityComponent implements OnInit {
     }
     this.service.getAirQualityData(this.selectedCities, this.selectedPollutions).subscribe(value => {
       this.airQualityData = value;
-      
-      console.log(this.airQualityData);
     });
   }
 

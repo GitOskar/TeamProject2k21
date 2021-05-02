@@ -1,0 +1,96 @@
+#container
+{
+	width:910px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#board
+{
+	width: 900px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-align: center;
+	font-size: 48px;
+	min-height: 60px;
+}
+
+#gallows
+{
+	float: left; 
+	width: 450px;
+	text-align: center;
+	min-height: 280px;
+}
+
+#alphabet
+{
+	float: left; 
+	width: 450px;
+    margin-left: 10px;
+	text-align: center;
+	min-height: 280px;
+    font-size: 23px;
+}
+
+.letter
+{
+	width: 30px;
+	height: 30px;
+	text-align:center;
+	padding: 5px;
+	margin: 5px;
+	border: 3px solid gray;
+	float: left;
+	cursor: pointer;
+	border-radius: 15px;
+}
+
+.letterGood
+{
+    width: 30px;
+	height: 30px;
+	text-align:center;
+	padding: 5px;
+	margin: 5px;
+	border: 3px solid gray;
+	float: left;
+	cursor: pointer;
+	border-radius: 15px;
+    background:greenyellow;
+    border-color: darkgreen;
+}
+
+.letterBad
+{
+    width: 30px;
+	height: 30px;
+	text-align:center;
+	padding: 5px;
+	margin: 5px;
+	border: 3px solid gray;
+	float: left;
+	cursor: pointer;
+	border-radius: 15px;
+    background: #f74600;
+    border-color: darkred;
+}
+
+.letter:hover
+{
+	background-color: gray;
+	color: white;
+	border: 3px solid gainsboro;
+}
+
+.reset
+{
+	color:green;
+	cursor: pointer;
+	font-size: 48px;
+}
+
+.reset:hover
+{
+	color: greenyellow;
+}

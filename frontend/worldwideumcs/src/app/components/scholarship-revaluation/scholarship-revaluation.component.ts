@@ -41,16 +41,16 @@ export class ScholarshipRevaluationComponent implements OnInit {
 
   setPepePicture(): void {
     if (this.amount < 10) {
-      this.setImage('pepe', 'assets/images/pepe-hangman.jpg');
+      this.setImage('pepe', 'assets/images/pepe/pepe-hangman.jpg');
     }
     else if (this.amount < 200) {
-      this.setImage('pepe', 'assets/images/pepe-crying.jpg');
+      this.setImage('pepe', 'assets/images/pepe/pepe-crying.jpg');
     }
     else if (this.amount < 700) {
-      this.setImage('pepe', 'assets/images/pepe-sad.jpg');
+      this.setImage('pepe', 'assets/images/pepe/pepe-sad.jpg');
     }
     else {
-      this.setImage('pepe', 'assets/images/pepe-happy.jpg');
+      this.setImage('pepe', 'assets/images/pepe/pepe-happy.jpg');
     }
 
   }
@@ -60,16 +60,16 @@ export class ScholarshipRevaluationComponent implements OnInit {
   }
 
   scholarships = [
-    { value: 'REKTORSKIE', viewValue: 'Rektorskie' },
-    { value: 'SOCJALNE', viewValue: 'Socjalne' },
-    { value: 'NIEPELNOSPRAWNYCH', viewValue: 'Niepełnosprawnych' }
+    { value: 'REKTORSKIE', viewValue: 'Rectory' },
+    { value: 'SOCJALNE', viewValue: 'Social' },
+    { value: 'NIEPELNOSPRAWNYCH', viewValue: 'Disabled' }
   ];
 
   levels = [
-    { value: 'FIRST', viewValue: 'Pierwszy' },
-    { value: 'SECOND', viewValue: 'Drugi' },
-    { value: 'THIRD', viewValue: 'Trzeci' },
-    { value: 'FOURTH', viewValue: 'Czwarty' }
+    { value: 'FIRST', viewValue: 'First' },
+    { value: 'SECOND', viewValue: 'Second' },
+    { value: 'THIRD', viewValue: 'Third' },
+    { value: 'FOURTH', viewValue: 'Fourth' }
   ];
 
   currencies = [
@@ -78,7 +78,6 @@ export class ScholarshipRevaluationComponent implements OnInit {
     { value: 'ISK', viewValue: 'ISK' },
     { value: 'PHP', viewValue: 'PHP' },
     { value: 'DKK', viewValue: 'DKK' },
-    { value: 'HUF', viewValue: 'HUF' },
     { value: 'CZK', viewValue: 'CZK' },
     { value: 'GBP', viewValue: 'GBP' },
     { value: 'RON', viewValue: 'RON' },
@@ -90,7 +89,7 @@ export class ScholarshipRevaluationComponent implements OnInit {
     { value: 'HRK', viewValue: 'HRK' },
     { value: 'JPY', viewValue: 'JPY' },
     { value: 'THB', viewValue: 'THB' },
-    { value: 'CHF', viewValue: 'Frank Szwajcarski' },
+    { value: 'CHF', viewValue: 'CHF' },
     { value: 'EUR', viewValue: 'Euro' },
     { value: 'MYR', viewValue: 'MYR' },
     { value: 'BGN', viewValue: 'BGN' },
@@ -104,8 +103,8 @@ export class ScholarshipRevaluationComponent implements OnInit {
     { value: 'ILS', viewValue: 'ILS' },
     { value: 'KRW', viewValue: 'KRW' },
     { value: 'MXN', viewValue: 'MXN' },
-    { value: 'USD', viewValue: 'Dolar amerykański' },
+    { value: 'USD', viewValue: 'US Dollar' },
     { value: 'BTC', viewValue: 'BitCoin' },
-    { value: 'GOLD', viewValue: 'Złoto' }
+    { value: 'GOLD', viewValue: 'Gold' }
   ];
 }

@@ -12,6 +12,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { AirQualityChartComponent } from './components/air-quality/air-quality-chart/air-quality-chart.component';
+import { HangmanMoriaGameComponent } from './components/hangman-moria-game/hangman-moria-game.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AirQualityChartComponent } from './components/air-quality/air-quality-c
     ScholarshipRevaluationComponent,
     AirQualityComponent,
     AirQualityChartComponent,
+    HangmanMoriaGameComponent
   ],
   imports: [
     RouterModule,

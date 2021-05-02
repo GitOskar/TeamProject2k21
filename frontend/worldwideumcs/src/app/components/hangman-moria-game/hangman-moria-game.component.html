@@ -1,0 +1,32 @@
+<div id='container'>
+    <div id='board'> {{ hiddenPassword }} </div>
+    <div id='gallows'>
+        <img id="hangmanImg">
+    </div>
+    <switch-container [ngSwitch]=gameStatus>
+        <case *ngSwitchCase="'VICTORY'">
+            <div id='alphabet'>
+                VICTORY!<br/><br/><br/>
+                WorldWideUmcs team hope that<br/><br/><br/>
+                you remember this teacher because you liked him a lot.<br/><br/><br/><br/>
+                <span class="reset" (click)='reset()'>Play Again?</span>
+            </div>
+        </case>
+        <case *ngSwitchCase="'DEFEAT'">
+            <div id='alphabet'>
+                DEFEAT!<br/><br/>
+                You probably haven't attended too many lectures.<br/><br/>
+                Correct password: {{ password }}<br/><br/><br/><br/>
+                <span class="reset" (click)='reset()'>Play Again?</span>
+            </div>
+        </case>
+        <case *ngSwitchCase="'DURING_PLAY'">
+            <div id='alphabet'>
+                <ng-container *ngFor='let letter of alphabet'>
+                    <div [id]="letter" class="letter" (click)='check(letter)'>{{ letter }}</div>
+                </ng-container>
+            </div>
+        </case>
+    </switch-container> 
+    <div style='clear:both;'></div>
+</div>

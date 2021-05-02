@@ -1,6 +1,6 @@
 <!-- Scholarship --> 
 <mat-form-field appearance="fill">
-    <mat-label>Typ stypendium</mat-label>
+    <mat-label>Scholarship type</mat-label>
     <mat-select [(value)]="selectedScholarshipType">
         <mat-option *ngFor="let scholarship of scholarships" [value]="scholarship.value">
             {{ scholarship.viewValue }}
@@ -10,7 +10,7 @@
 
 <!-- Level -->
 <mat-form-field appearance="fill">
-    <mat-label>Poziom stypendium</mat-label>
+    <mat-label>Scholarship level</mat-label>
     <mat-select [(value)]="selectedLevel">
         <mat-option *ngFor="let level of levels" [value]="level.value">
             {{ level.viewValue }}
@@ -20,7 +20,7 @@
 
 <!-- Currency -->
 <mat-form-field appearance="fill">
-    <mat-label>Waluta</mat-label>
+    <mat-label>Currency</mat-label>
     <mat-select [(value)]="selectedCurrency">
         <mat-option *ngFor="let currency of currencies" [value]="currency.value">
             {{ currency.viewValue }}
@@ -28,16 +28,16 @@
     </mat-select>
 </mat-form-field>
 
-<button mat-raised-button (click)="getAmount()">Zatwierdź</button>
+<button mat-raised-button (click)="getAmount()">Confirm</button>
 
 <h2 *ngIf="amount">
-    Wysokosc twojego stypendium w 
+    Value of your scholarship in 
     <switch-container [ngSwitch]=currency>
-        <case *ngSwitchCase="'GOLD'">złocie</case>
+        <case *ngSwitchCase="'GOLD'">gold</case>
         <case *ngSwitchDefault>{{ currency }}</case>
     </switch-container> 
-    wynosi {{ amount }}
-    <gram *ngIf="currency == 'GOLD'"> grama</gram>
+    is {{ amount }}
+    <gram *ngIf="currency == 'GOLD'"> gram</gram>
 </h2>
 
 <img id="pepe" class="center">
