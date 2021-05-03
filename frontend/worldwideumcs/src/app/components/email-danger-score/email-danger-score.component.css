@@ -1,0 +1,39 @@
+mat-form-field
+{
+    margin: 10px;
+    display: inline-block;
+}
+
+.fullWidth
+{
+    width: 95%;
+}
+
+.teacherDangerScoreForm
+{
+    margin-top: 2%;
+    width: 100%;
+    background: white;
+    border: 1px solid black;
+}
+
+button
+{
+    margin: 9px;
+}
+
+.teacherNotFound
+{
+    font-size: x-large;
+    color: red;
+    text-align: center;
+    margin: 2%;
+}
+
+.teacherFinded
+{
+    font-size: large;
+    color: black;
+    text-align: center;
+    margin: 2%;
+}

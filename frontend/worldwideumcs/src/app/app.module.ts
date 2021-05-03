@@ -13,6 +13,9 @@ import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { AirQualityChartComponent } from './components/air-quality/air-quality-chart/air-quality-chart.component';
 import { HangmanMoriaGameComponent } from './components/hangman-moria-game/hangman-moria-game.component';
+import { EmailDangerScoreComponent } from './components/email-danger-score/email-danger-score.component';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,8 @@ import { HangmanMoriaGameComponent } from './components/hangman-moria-game/hangm
     ScholarshipRevaluationComponent,
     AirQualityComponent,
     AirQualityChartComponent,
-    HangmanMoriaGameComponent
+    HangmanMoriaGameComponent,
+    EmailDangerScoreComponent
   ],
   imports: [
     RouterModule,
@@ -30,8 +34,9 @@ import { HangmanMoriaGameComponent } from './components/hangman-moria-game/hangm
     BrowserAnimationsModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatButtonModule
-    
+    MatButtonModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

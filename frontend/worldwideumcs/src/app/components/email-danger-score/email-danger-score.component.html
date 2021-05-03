@@ -1,0 +1,36 @@
+<h2>Email danger score</h2>
+<p>After inserting all data you can press confirm and check that teacher will be angry cuz of you</p>
+
+<div class="teacherDangerScoreForm">
+    <mat-form-field>
+        <mat-label>First name</mat-label>
+        <input #firstName matInput placeholder="Teacher first name">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Second name</mat-label>
+        <input #lastName matInput placeholder="Teacher last name">
+    </mat-form-field>
+
+    <mat-form-field class="fullWidth">
+        <mat-label>Subject</mat-label>
+        <input #subject matInput placeholder="Email subject">
+    </mat-form-field>
+
+    <mat-form-field class="fullWidth">
+        <mat-label>Email body</mat-label>
+        <input #emailBody matInput placeholder="Insert here the body of your email">
+    </mat-form-field>
+
+    <button mat-raised-button (click)="checkEmailDangerScore(firstName.value, lastName.value, subject.value, emailBody.value)">Confirm</button>
+</div>
+
+<div *ngIf="emailDangerData!=undefined">
+    <div *ngIf="emailDangerData.status==404" class="teacherNotFound">
+        Teacher with given first name and last name does not exists in Moria database
+    </div>
+    <div *ngIf="emailDangerData.status==200" class="teacherFinded">
+        The chance that your teacher will get engry is: {{ emailDangerData.score }}%. <br/>
+        In your email you used: {{ emailDangerData.colloquialism_count }} colloquialism verbs and {{ emailDangerData.profanity_count }} profanities.
+    </div>
+</div>
