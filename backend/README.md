@@ -6,15 +6,22 @@
 
 API Gateway is running on port 8080,
 
-"gradlew bootRun" to run project from api-gateway directory
-
 ### Scholarship Revaluation
 
 API is running on port: 8090 \
 API is avaiable on /scholarship-revaluation endpoint. 
 
-->Here will be a description<- 
+### Recognize Email Threat
 
-->Here will be a documentation<-
+API is running on port: xxxx \
+API is avaiable on /xxx endpoint. 
 
-"gradlew bootRun" to run project from scholarship-revaluation directory
+### Run
+
+#### Java
+
+"gradlew bootRun" to run project from api-gateway directory
+
+#### Python
+
+--> desc <--
