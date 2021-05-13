@@ -1,0 +1,19 @@
+<h2>Statistical Teacher Data</h2>
+<p>Set the switch to the appropriate value</p>
+<div class="switch">
+    <mat-slide-toggle (change)="instituteChange()"  [(ngModel)]="isChecked">
+        <ng-template *ngIf="isChecked; then thenBlock else elseBlock"></ng-template>
+        <ng-template #thenBlock>You will see IT institute statistics.</ng-template>
+        <ng-template #elseBlock>You will see no IT institute statistics.</ng-template>
+    </mat-slide-toggle>
+</div>
+<p>After pressing a button, an appropriate diagram will be displayed showing the statistics on teachers</p>
+<div class="buttons">
+    <button mat-raised-button color="primary" (click)="setStatistic('degree percentage')">Degree Percentage</button>
+    <button mat-raised-button color="accent" (click)="setStatistic('gender percentage')">Gender Percentage</button>
+</div>
+
+<switch-container [ngSwitch]=statistic>
+    <app-degree-percentage-chart [statisticsToDisplay]="statisticsToDisplay" case *ngSwitchCase="'degree percentage'"></app-degree-percentage-chart>
+    <app-gender-percentage-chart [statisticsToDisplay]="statisticsToDisplay" case *ngSwitchCase="'gender percentage'"></app-gender-percentage-chart>
+</switch-container>

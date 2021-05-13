@@ -16,6 +16,10 @@ import { HangmanMoriaGameComponent } from './components/hangman-moria-game/hangm
 import { EmailDangerScoreComponent } from './components/email-danger-score/email-danger-score.component';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { StatisticalTeacherDataComponent } from './components/statistical-teacher-data/statistical-teacher-data.component';
+import { DegreePercentageChartComponent } from './components/statistical-teacher-data/charts/degree-percentage-chart/degree-percentage-chart.component';
+import { GenderPercentageChartComponent } from './components/statistical-teacher-data/charts/gender-percentage-chart/gender-percentage-chart.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 
 @NgModule({
   declarations: [
@@ -24,7 +28,10 @@ import { FormsModule } from '@angular/forms';
     AirQualityComponent,
     AirQualityChartComponent,
     HangmanMoriaGameComponent,
-    EmailDangerScoreComponent
+    EmailDangerScoreComponent,
+    StatisticalTeacherDataComponent,
+    DegreePercentageChartComponent,
+    GenderPercentageChartComponent
   ],
   imports: [
     RouterModule,
@@ -36,7 +43,8 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,20 @@
+button
+{
+    margin: 20px 10px 20px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+}
+
+.buttons
+{
+    text-align: center;
+}
+
+.switch
+{
+    text-align: center;
+    margin: 15px;
+}
