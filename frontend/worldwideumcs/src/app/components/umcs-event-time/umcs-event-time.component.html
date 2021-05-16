@@ -1,0 +1,24 @@
+<h2>UMCS Event Time</h2>
+<p>Select the event and the unit of time in which you want to see the remaining time.</p>
+
+<div class="singleSelect">
+<mat-form-field appearance="fill" width=500px>
+    <mat-label>Event</mat-label>
+    <mat-select [(value)]="selectedEvent" (change)="setRemainingTime()">
+        <mat-option *ngFor="let event of events" [value]="event">
+            {{ event.name }}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+</div>
+
+<img [src]="pepeImgSrc" class="center">
+
+<h1>{{ remainingTimeString }}</h1>
+
+<div class="buttons">
+    <button mat-raised-button color="primary" (click)="timeUnit = 'second'; setRemainingTime()">Second</button>
+    <button mat-raised-button color="accent" (click)="timeUnit = 'minute'; setRemainingTime()">Minute</button>
+    <button mat-raised-button color="primary" (click)="timeUnit = 'hour'; setRemainingTime()">Hour</button>
+    <button mat-raised-button color="accent" (click)="timeUnit = 'day'; setRemainingTime()">Day</button>
+</div>

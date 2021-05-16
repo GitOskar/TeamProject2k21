@@ -19,7 +19,8 @@ import { FormsModule } from '@angular/forms';
 import { StatisticalTeacherDataComponent } from './components/statistical-teacher-data/statistical-teacher-data.component';
 import { DegreePercentageChartComponent } from './components/statistical-teacher-data/charts/degree-percentage-chart/degree-percentage-chart.component';
 import { GenderPercentageChartComponent } from './components/statistical-teacher-data/charts/gender-percentage-chart/gender-percentage-chart.component';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle'
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { UmcsEventTimeComponent } from './components/umcs-event-time/umcs-event-time.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle'
     EmailDangerScoreComponent,
     StatisticalTeacherDataComponent,
     DegreePercentageChartComponent,
-    GenderPercentageChartComponent
+    GenderPercentageChartComponent,
+    UmcsEventTimeComponent
   ],
   imports: [
     RouterModule,

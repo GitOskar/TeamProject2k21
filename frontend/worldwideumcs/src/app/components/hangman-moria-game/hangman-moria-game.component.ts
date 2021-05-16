@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { VirtualTimeScheduler } from 'rxjs';
 import { MoriaParserService, Teacher } from 'src/app/service/moria-parser/moria-parser.service';
 
 @Component({
