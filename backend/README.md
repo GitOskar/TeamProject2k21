@@ -4,17 +4,7 @@
 
 ### API Gateway
 
-API Gateway is running on port 8080,
-
-### Scholarship Revaluation
-
-API is running on port: 8090 \
-API is avaiable on /scholarship-revaluation endpoint. 
-
-### Recognize Email Threat
-
-API is running on port: xxxx \
-API is avaiable on /xxx endpoint. 
+API Gateway is running on port 8080 and redirect requests to other ports by endpoint. More in services documentation.
 
 ### Run
 
