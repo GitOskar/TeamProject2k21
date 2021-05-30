@@ -6,6 +6,7 @@ import { HangmanMoriaGameComponent } from './components/hangman-moria-game/hangm
 import { ScholarshipRevaluationComponent } from './components/scholarship-revaluation/scholarship-revaluation.component';
 import { StatisticalTeacherDataComponent } from './components/statistical-teacher-data/statistical-teacher-data.component';
 import { UmcsEventTimeComponent } from './components/umcs-event-time/umcs-event-time.component';
+import { WeatherStatisticsComponent } from './components/weather-statistics/weather-statistics.component';
 
 const routes: Routes = [
   { path: 'scholarship-revaluation', component: ScholarshipRevaluationComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'hangman-moria-game', component: HangmanMoriaGameComponent },
   { path: 'email-danger-score', component: EmailDangerScoreComponent },
   { path: 'statistical-teacher-data', component: StatisticalTeacherDataComponent },
-  { path: 'umcs-event-time', component: UmcsEventTimeComponent }
+  { path: 'umcs-event-time', component: UmcsEventTimeComponent },
+  { path: 'weather-statistics', component: WeatherStatisticsComponent }
 ];
 
 @NgModule({

@@ -20,7 +20,8 @@ import { StatisticalTeacherDataComponent } from './components/statistical-teache
 import { DegreePercentageChartComponent } from './components/statistical-teacher-data/charts/degree-percentage-chart/degree-percentage-chart.component';
 import { GenderPercentageChartComponent } from './components/statistical-teacher-data/charts/gender-percentage-chart/gender-percentage-chart.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { UmcsEventTimeComponent } from './components/umcs-event-time/umcs-event-time.component'
+import { UmcsEventTimeComponent } from './components/umcs-event-time/umcs-event-time.component';
+import { WeatherStatisticsComponent } from './components/weather-statistics/weather-statistics.component'
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { UmcsEventTimeComponent } from './components/umcs-event-time/umcs-event-
     StatisticalTeacherDataComponent,
     DegreePercentageChartComponent,
     GenderPercentageChartComponent,
-    UmcsEventTimeComponent
+    UmcsEventTimeComponent,
+    WeatherStatisticsComponent
   ],
   imports: [
     RouterModule,

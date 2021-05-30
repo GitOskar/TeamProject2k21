@@ -1,0 +1,50 @@
+<h2>Weather statistics</h2>
+<p>Select the cities and press the button. Then you will see statistics for selected cities.</p>
+
+<div class="forms">
+
+    <mat-form-field appearance="fill">
+        <mat-label>City</mat-label>
+        <mat-select multiple [(value)]="selectedCities">
+            <mat-option *ngFor="let city of cities" [value]="city.value">{{ city.viewValue }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button mat-raised-button (click)="getWeatherData()">Confirm</button>
+</div>
+<div id="widgets">
+    <div *ngFor="let weather of weatherStatistics" class="divWeather">
+
+        <!-- SUN -->
+        <ng-container *ngIf="weather.cloud_coverage < 30;else second">
+            <div class="weatherWidgetRow">
+                <span class="material-icons sun">wb_sunny</span>
+            </div>
+        </ng-container>
+
+        <!-- SUN AND CLOUD -->
+        <ng-template #second>
+            <ng-container *ngIf="weather.cloud_coverage < 70;else third">
+                <div class="weatherWidgetRow">
+                    <span class="material-icons sun">wb_sunny</span>
+                </div>
+                <div class="weatherWidgetRow cloudDiv">
+                    <span class="material-icons animatedCloud">cloud</span>
+                </div>
+            </ng-container>
+        </ng-template>
+
+        <!-- CLOUD -->
+        <ng-template #third>
+            <div class="weatherWidgetRow">
+                <span class="material-icons cloud">cloud</span>
+            </div>
+        </ng-template>
+
+        
+        <div class="weatherWidgetRow temperature">{{ weather.temperature }}°</div>
+        <div class="weatherWidgetRow windSpeed">Wind speed: {{ weather.wind_speed }} km/h</div>
+        <div class="weatherWidgetRow rain">Rain: {{ weather.rain }}</div>
+        <div class="weatherWidgetRow cityName">{{ weather.city_name }}</div>
+        <div class="weatherWidgetRow cloudCoverege">Cloud coverege: {{ weather.cloud_coverage }}%</div>
+    </div>
+</div>

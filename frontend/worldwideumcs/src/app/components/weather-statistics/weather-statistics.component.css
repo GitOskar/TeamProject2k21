@@ -1,0 +1,85 @@
+button {
+    margin-left: 5%;
+}
+
+.forms {
+    text-align: center;
+}
+
+#widgets {
+    display: inline-block;
+    text-align: center;
+    margin: 1%;
+}
+
+.divWeather{
+    display: inline-block;
+    margin: 2%;
+    border-radius: 10px;
+    width: 200px;
+    height: 220px;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(8,7,42,1) 75%, rgb(8, 10, 63) 100%);
+    color: white;;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.weatherWidgetRow{
+    display:block;
+    margin:0 auto;
+    width: fit-content;
+}
+
+.sun{
+    margin-top: 10px;
+    color: yellow;
+    filter: drop-shadow( 1px 1px 10px yellow);
+    font-size: 55px;
+}
+
+.cloud{
+    margin-top: 10px;
+    color: rgb(104, 175, 197);
+    filter: drop-shadow( 1px 1px 10px white);
+    font-size: 55px;
+}
+
+.cloudDiv{
+    margin-top: -40px;
+}
+
+.animatedCloud{
+    font-size: 40px;
+    color: rgb(104, 175, 197);
+    filter: drop-shadow( 1px 1px 5px rgb(104, 175, 197));
+    animation-name: cloudMovement;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes cloudMovement{
+    from{margin-left: -35px;}
+    to{margin-left: 45px;}
+}
+
+.temperature {
+    font-size: 32px;
+    
+}
+
+.windSpeed {
+    font-size: 12px;
+    margin-top: 5px;
+}
+.rain {
+    font-size: 12px;
+}
+.cityName {
+    font-size: 25px;
+    margin-top: 10px;
+}
+.cloudCoverege {
+    font-size: 12px;
+}
