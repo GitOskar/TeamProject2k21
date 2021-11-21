@@ -1,6 +1,6 @@
 # World Wide UMCS 
 
-### team project 2021
+### team project 2021 
 
 >## Contributors:
 * [GitOskar](https://github.com/GitOskar)
